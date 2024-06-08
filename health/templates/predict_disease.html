@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+
+	<section class="logins py-5">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="title-section mb-md-5 mb-4">
+				<h6 class="w3ls-title-sub" style="color:red"></h6>
+				<h3 class="w3ls-title text-uppercase text-dark font-weight-bold">Heart Prediction Output</h3>
+			</div><hr/>
+			<div class="login px-sm-12" style="width:100%">
+
+                <h1 align='center' style='color:red'>Prediction output</h1><hr><center><p><b>Accuracy (%) is :</b> {{ accuracy }}  </p><p><b>Result is :</b>
+                {% if pred == "0" %}
+                <span style='color:green'>You are healthy.</span>
+                {% else %}
+                <span style='color:red'>You are Unhealthy, Need to Checkup.</span>
+                {% endif %}
+
+            </p></center>
+
+			</div>
+            
+		</div>
+	</section>
+
+{% endblock %}
